@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ICANPath cho nhà trường 2026-2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light dark;
+--bg:light-dark(#ffffff,#0e1a26);--soft:light-dark(#f2f7fc,#142536);--line:light-dark(#d1e2ef,#26405a);
+--ink:light-dark(#18364e,#e6eef6);--mute:light-dark(#49627a,#a9bccd);--blue:light-dark(#0057a5,#5aa6ec);
+--deep:#0057a5;--green:#8cc63f;--pink:#ed2490;--card:light-dark(#ffffff,#172b3e)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Be Vietnam Pro",system-ui,sans-serif;overflow-x:clip}
+img{max-width:100%;display:block}
+h1,h2,h3{line-height:1.15;text-wrap:balance;margin:0}
+h2{font-size:clamp(26px,3.4vw,38px);font-weight:700;color:var(--blue)}
+h3{font-size:18px;font-weight:700}
+p{margin:0}
+.wrap{max-width:1180px;margin:0 auto}
+.band{padding:clamp(40px,5vw,72px) max(5vw,16px)}
+.band.alt{background:var(--soft)}
+.kick{font-size:14px;font-weight:600;color:var(--mute);margin-bottom:8px}
+.lead{color:var(--mute);max-width:66ch;margin-top:12px;font-size:17px}
+.grid{display:grid;gap:20px;margin-top:32px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.card p{color:var(--mute);margin-top:8px}
+.shot{background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px;overflow:hidden}
+.shot img{border-radius:8px;margin:0 auto}
+.shot.wide{overflow-x:auto}@media(max-width:700px){.shot.wide img{width:760px;max-width:none}}
+.cap{font-size:13px;color:var(--mute);margin-top:8px}
+ul.dots{margin:10px 0 0;padding-left:20px;color:var(--mute)}ul.dots li{margin:6px 0}
+ul.dots li::marker{color:var(--green)}
+.hero{background:var(--deep);color:#fff;padding:0 max(5vw,16px)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:40px;align-items:center}
+.hero-txt{padding:56px 0}
+.logo{display:inline-block;background:#fff;border-radius:10px;padding:8px 12px;margin-bottom:28px}
+.logo img{height:30px;width:auto}
+.hero .year{font-weight:600;color:#cfe6ff}
+.hero h1{font-size:clamp(42px,6vw,64px);font-weight:800;line-height:1.02;margin:6px 0 14px}
+.hero .sub{font-size:clamp(18px,2vw,21px);font-weight:600;max-width:30ch}
+.hero .desc{color:#d9e9f8;margin-top:14px;max-width:52ch}
+.free{display:inline-flex;align-items:center;gap:10px;background:var(--green);color:#10283a;font-weight:700;border-radius:999px;padding:10px 20px;margin-top:26px}
+.hero-pic{align-self:stretch;display:flex;align-items:flex-end}
+.hero-pic img{width:100%;height:100%;max-height:520px;object-fit:cover;object-position:center top;border-radius:20px 20px 0 0}
+nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .scroll{display:flex;gap:4px;padding:8px max(5vw,16px);max-width:1260px;margin:0 auto}
+nav a{flex:none;color:var(--ink);text-decoration:none;font-size:14px;font-weight:500;padding:10px 12px;border-radius:8px;min-height:44px;display:flex;align-items:center}
+nav a:hover,nav a:focus-visible{background:var(--soft);color:var(--blue)}
+.scroll{overflow-x:auto;scrollbar-width:thin}
+.roles{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:20px;margin-top:28px}
+.role{border-radius:14px;padding:22px;border:1px solid var(--line);background:var(--card)}
+.role h3{color:var(--blue)}
+.role a{color:var(--ink);font-weight:500}
+.role ol{margin:12px 0 0;padding-left:20px}.role li{margin:8px 0}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:0;margin-top:32px;border-top:3px solid var(--blue)}
+.fact{padding:18px 18px 18px 0}
+.fact b{display:block;font-size:24px;color:var(--blue);font-weight:700}
+.fact span{color:var(--mute);font-size:15px}
+.steps{list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{position:relative;padding:0 0 22px 56px;counter-increment:s}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:40px;height:40px;border-radius:50%;background:var(--deep);color:#fff;display:grid;place-items:center;font-weight:700}
+.steps li:not(:last-child)::after{content:"";position:absolute;left:19px;top:44px;bottom:4px;width:2px;background:var(--line)}
+.steps h3{padding-top:8px}.steps p{color:var(--mute);margin-top:4px}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:start;margin-top:32px}
+.lv{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+.lv div{flex:1 1 90px;background:var(--soft);border-radius:10px;padding:12px}
+.lv b{font-size:26px;color:var(--blue);display:block}
+.lv span{font-size:13px;color:var(--mute)}
+.dist{margin-top:14px}
+.row{display:grid;grid-template-columns:60px minmax(0,1fr) 44px;gap:12px;align-items:center;margin:12px 0;font-size:15px}
+.bar{height:14px;background:var(--soft);border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--deep);border-radius:99px}
+.row.top .bar i{background:var(--green)}
+.row em{font-style:normal;text-align:right;font-weight:600;font-variant-numeric:tabular-nums}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px}
+.tabs button{font:inherit;font-weight:600;font-size:16px;min-height:44px;padding:8px 20px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.tabs button[aria-selected=true]{background:var(--deep);border-color:var(--deep);color:#fff}
+.tabs button:focus-visible,summary:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+.panel{margin-top:20px}
+.pk{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start}
+.inc{list-style:none;margin:0;padding:0}
+.inc li{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}
+.inc li::before{content:"";flex:none;width:22px;height:22px;margin-top:2px;border-radius:50%;background:var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%2310283a' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat}
+.inc b{display:block}.inc span{color:var(--mute);font-size:15px}
+.tag{display:inline-block;font-size:13px;font-weight:600;background:color-mix(in srgb,var(--green) 25%,transparent);color:var(--ink);border-radius:6px;padding:2px 8px;margin-left:6px}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th{background:var(--deep);color:#fff;text-align:left;font-weight:600;padding:12px}
+td{padding:12px;border-bottom:1px solid var(--line);vertical-align:top}
+td.c{text-align:center;color:var(--blue);font-weight:700}
+tbody tr:nth-child(even) td{background:var(--soft)}
+.tblwrap{margin-top:28px;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.tier{border-top:4px solid var(--deep)}.tier.t2{border-top-color:var(--green)}.tier.t3{border-top-color:var(--pink)}
+.tier .st{display:inline-block;margin-top:14px;font-size:13px;font-weight:600;color:var(--blue)}
+.cost{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:24px;margin-top:32px}
+.zero{background:var(--deep);color:#fff;border-radius:16px;padding:32px;display:flex;flex-direction:column;justify-content:center}
+.zero b{font-size:clamp(48px,7vw,72px);font-weight:800;line-height:1}
+.zero span{margin-top:14px;font-weight:600;color:#d9e9f8}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-top:12px}
+summary{cursor:pointer;font-weight:600;padding:16px 48px 16px 20px;min-height:44px;list-style:none;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:20px;top:12px;font-size:22px;color:var(--blue)}
+details[open] summary::after{content:"–"}
+details p{padding:0 20px 18px;color:var(--mute)}
+.contact{background:var(--deep);color:#fff}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:32px;align-items:center}
+.contact h2{color:#fff;font-size:clamp(28px,4vw,44px)}
+.contact p{color:#d9e9f8;margin-top:14px;max-width:56ch}
+.next{list-style:none;padding:0;margin:22px 0 0;display:flex;flex-wrap:wrap;gap:10px}
+.next li{background:rgba(255,255,255,.12);border-radius:999px;padding:8px 16px;font-weight:600}
+.peri{background:#fff;border-radius:18px;padding:18px;justify-self:end;text-align:center;color:#18364e}
+.peri img{width:150px;margin:0 auto}
+footer{padding:20px max(5vw,16px);font-size:13px;color:var(--mute);text-align:center}
+@media(max-width:860px){.hero .wrap,.split,.pk,.cost,.contact .wrap{grid-template-columns:1fr}.hero-txt{padding:40px 0 8px}.hero-pic img{max-height:340px;border-radius:16px 16px 0 0}.peri{justify-self:start}}
+@media(min-width:900px){nav{position:sticky}}
+@media(max-width:600px){table{font-size:13px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px}.stack td{display:flow-root;border:0;padding:3px 0;padding-inline-start:8em;text-align:start}.stack td::before{content:attr(data-l);float:inline-start;width:7.5em;margin-inline-start:-8em;white-space:normal;font-weight:600;color:var(--ink)}.stack td:empty{display:none}.stack tbody tr:nth-child(even) td{background:none}.stack tr{border-bottom:1px solid var(--line);padding-inline:12px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+<script>new MutationObserver(()=>{for(const c of document.querySelectorAll('.stack td:not([data-l])')){let i=0,p=c;while(p=p.previousElementSibling)i+=p.colSpan;c.dataset.l=c.closest('table').rows[0].cells[i]?.textContent||''}}).observe(document,{childList:true,subtree:true})</script>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-txt">
+      <span class="logo"><img src="img/logo.png" alt="ICAN CONNECT – A brand of Galaxy Education"></span>
+      <div class="year">Năm học 2026-2027</div>
+      <h1>ICANPath</h1>
+      <p class="sub">Đánh giá năng lực, định hướng học tập cho học sinh tiểu học, THCS và THPT</p>
+      <p class="desc">Gói đồng hành gồm khảo thí tiếng Anh 4 kỹ năng, luyện nói, hướng nghiệp, thi thử ĐGNL và các hoạt động bổ trợ cho giáo viên, học sinh, phụ huynh.</p>
+      <div class="free">Miễn phí cho nhà trường</div>
+    </div>
+    <div class="hero-pic"><img src="img/hero.jpg" alt="Peri, nhân vật của ICANPath, bước trên con đường học tập dẫn tới ngôi trường"></div>
+  </div>
+</header>
+
+<nav aria-label="Mục lục">
+  <div class="scroll">
+    <a href="#van-de">Vấn đề</a><a href="#bai-danh-gia">Bài đánh giá</a><a href="#to-chuc">Tổ chức</a><a href="#bao-cao">Báo cáo</a><a href="#goi">Gói theo cấp học</a><a href="#muc-ho-tro">Các mức hỗ trợ</a><a href="#bo-tro">Bổ trợ</a><a href="#lich">Lịch năm học</a><a href="#chi-phi">Chi phí</a><a href="#lo-trinh">Lộ trình</a><a href="#faq">Hỏi đáp</a><a href="#lien-he">Liên hệ</a>
+  </div>
+</nav>
+
+<section class="band">
+  <div class="wrap">
+    <p class="kick">Đọc nhanh theo vai trò</p>
+    <h2>Thầy cô cần xem phần nào trước?</h2>
+    <div class="roles">
+      <div class="role">
+        <h3>Ban giám hiệu</h3>
+        <ol>
+          <li><a href="#goi">Gói hỗ trợ miễn phí theo từng cấp học</a></li>
+          <li><a href="#bao-cao-truong">Báo cáo tổng hợp theo khối, lớp cho nhà trường</a></li>
+          <li><a href="#chi-phi">Chi phí 0 đồng và phần nhà trường phối hợp</a></li>
+          <li><a href="#lo-trinh">Lộ trình triển khai và ba bước bắt đầu</a></li>
+        </ol>
+      </div>
+      <div class="role">
+        <h3>Thầy cô Tiếng Anh</h3>
+        <ol>
+          <li><a href="#bai-danh-gia">Bài khảo thí thích ứng 4 kỹ năng theo CEFR</a></li>
+          <li><a href="#to-chuc">Tổ chức một buổi thi trên lớp</a></li>
+          <li><a href="#bao-cao">Đọc báo cáo học sinh và chia nhóm theo trình độ</a></li>
+          <li><a href="#bo-tro">Workshop chuyên môn, nội dung CLB và bảng tin</a></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band alt" id="van-de">
+  <div class="wrap">
+    <p class="kick">Câu hỏi của nhiều nhà trường</p>
+    <h2>Học sinh đang sử dụng tiếng Anh ở mức nào để học tập và phát triển?</h2>
+    <div class="grid g3">
+      <div class="card"><h3>Khó đo kỹ năng nghe và nói</h3><p>Bài kiểm tra trên lớp thường tập trung vào từ vựng, ngữ pháp và đọc. Giáo viên còn ít dữ liệu về hai kỹ năng giao tiếp là nghe và nói.</p></div>
+      <div class="card"><h3>Một lớp, nhiều trình độ</h3><p>Năng lực trong cùng một lớp có thể chênh lệch nhiều. Giáo viên cần căn cứ để chia nhóm và điều chỉnh cách dạy.</p></div>
+      <div class="card"><h3>Thiếu căn cứ để định hướng</h3><p>Khi chọn hướng học sau lớp 9 hoặc lớp 12, học sinh và phụ huynh có thể chưa nắm rõ sở thích và thế mạnh của các em.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="bai-danh-gia">
+  <div class="wrap">
+    <p class="kick">Bài khảo thí thích ứng (Adaptive test)</p>
+    <h2>Đánh giá năng lực tiếng Anh theo khung CEFR</h2>
+    <div class="facts">
+      <div class="fact"><b>Khoảng 30 phút</b><span>Làm bài trên máy tính, máy tính bảng, điện thoại</span></div>
+      <div class="fact"><b>4 kỹ năng</b><span>Nghe, nói, đọc, viết, kèm từ vựng và ngữ pháp</span></div>
+      <div class="fact"><b>Lớp 3-11</b><span>Từ tiểu học đến THPT, nội dung theo lứa tuổi</span></div>
+      <div class="fact"><b>Pre-A1 đến C1</b><span>Mức tham chiếu theo khung CEFR quốc tế</span></div>
+    </div>
+    <h3 style="margin-top:36px">5 chặng của bài đánh giá ICANPath</h3>
+    <div class="shot wide" style="margin-top:14px"><img src="img/stages.jpg" alt="Năm chặng của bài đánh giá: Khởi động, Nghe, Đọc, Nói và Viết"></div>
+    <div class="grid g2" style="margin-top:20px">
+      <div class="card"><h3>Thích ứng theo từng em</h3><p>Độ khó tăng khi trả lời đúng và giảm khi trả lời sai, giúp xác định nhanh trình độ của từng em.</p></div>
+      <div class="card"><h3>Chấm phần nói</h3><p>Phần nói được ghi âm và chấm theo phát âm, độ trôi chảy và nội dung.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band alt" id="to-chuc">
+  <div class="wrap">
+    <p class="kick">Một đợt khảo thí</p>
+    <h2>Tổ chức một đợt khảo thí như thế nào?</h2>
+    <p class="lead">Galaxy Education cung cấp hệ thống ổn định, dễ triển khai, miễn phí và an toàn.</p>
+    <div class="split">
+      <ol class="steps">
+        <li><h3>Lên kế hoạch</h3><p>Trường chọn khối, lớp và ngày thi. Galaxy Education tạo đợt thi, gửi mã tham gia và mã QR cho từng lớp.</p></li>
+        <li><h3>Học sinh vào bài</h3><p>Quét QR hoặc nhập mã, không cần tạo tài khoản. Điền thông tin và tự đánh giá trong khoảng 2 phút.</p></li>
+        <li><h3>Làm bài</h3><p>Học sinh làm bài thích ứng 4 kỹ năng. Giáo viên chỉ cần điều phối lớp trong buổi thi.</p></li>
+        <li><h3>Nhận báo cáo</h3><p>Phụ huynh nhận báo cáo riêng của con. Nhà trường nhận báo cáo tổng hợp theo lớp, khối.</p></li>
+      </ol>
+      <figure style="margin:0"><div class="shot"><img src="img/code.jpg" alt="Màn hình nhập mã tham gia gồm 6 ký tự"></div><figcaption class="cap">Màn hình nhập mã tham gia (bản demo)</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="bao-cao">
+  <div class="wrap">
+    <p class="kick">Báo cáo cho học sinh và phụ huynh</p>
+    <h2>Từ kết quả đánh giá đến gợi ý luyện tập</h2>
+    <div class="split">
+      <div>
+        <ul class="dots">
+          <li>Trình độ tổng thể và từng kỹ năng theo mức tham chiếu CEFR.</li>
+          <li>Những gì học sinh đã làm được, điểm mạnh và điểm cần luyện.</li>
+          <li>Nhận xét chi tiết phần nói và viết, kèm gợi ý sửa.</li>
+          <li>So sánh phần tự đánh giá của học sinh với kết quả bài làm.</li>
+          <li>Gợi ý lộ trình học theo kỹ năng cần ưu tiên.</li>
+        </ul>
+        <div class="card" style="margin-top:22px;background:var(--soft)"><b>Bảo mật:</b> báo cáo mở bằng đường dẫn hoặc mã QR riêng, chỉ chia sẻ cho phụ huynh.</div>
+      </div>
+      <div class="card">
+        <h3>Báo cáo mẫu (học sinh lớp 7)</h3>
+        <div class="lv"><div><b>B1</b><span>Tổng thể</span></div><div><b>B2</b><span>Thế mạnh (Nói)</span></div><div><b>B1</b><span>Cần luyện (Viết)</span></div></div>
+        <div class="lv"><div><b>B1</b><span>Nghe</span></div><div><b>B2</b><span>Đọc</span></div><div><b>B2</b><span>Nói</span></div><div><b>B1</b><span>Viết</span></div></div>
+        <div class="shot" style="margin-top:16px"><img src="img/practice.jpg" alt="Phần Việc em có thể bắt đầu với gợi ý luyện tập hằng ngày"></div>
+        <p class="cap">Ví dụ gợi ý luyện tập (ảnh từ bản demo ICANPath)</p>
+      </div>
+    </div>
+
+    <div id="bao-cao-truong" style="margin-top:56px">
+      <p class="kick">Báo cáo cho nhà trường</p>
+      <h2>Năng lực tiếng Anh theo khối, lớp và kỹ năng</h2>
+      <div class="split">
+        <div class="card">
+          <h3>Phân bố trình độ khối 7</h3>
+          <div class="dist" id="dist"></div>
+          <p class="cap">Số liệu minh họa</p>
+        </div>
+        <div>
+          <h3>Nhà trường dùng kết quả để</h3>
+          <ul class="dots">
+            <li>Chia nhóm theo trình độ, chọn học sinh cần phụ đạo hoặc bồi dưỡng.</li>
+            <li>Nhận diện kỹ năng còn yếu của cả khối để điều chỉnh kế hoạch dạy và bổ trợ.</li>
+            <li>Chọn học sinh cho đội tuyển và câu lạc bộ.</li>
+            <li>So sánh tiến bộ qua các đợt khảo thí trong năm.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band alt" id="goi">
+  <div class="wrap">
+    <p class="kick">Gói theo cấp học</p>
+    <h2>Gói hỗ trợ miễn phí từ tiểu học đến THPT</h2>
+    <p class="lead">Chọn cấp học của trường để xem nội dung gói.</p>
+    <div class="tabs" role="tablist">
+      <button role="tab" id="tab-th" aria-selected="true" aria-controls="p-th">Tiểu học (khối 3-5)</button>
+      <button role="tab" id="tab-thcs" aria-selected="false" aria-controls="p-thcs">THCS (khối 6-9)</button>
+      <button role="tab" id="tab-thpt" aria-selected="false" aria-controls="p-thpt">THPT (khối 10-11)</button>
+    </div>
+
+    <div class="panel card" role="tabpanel" id="p-th" aria-labelledby="tab-th">
+      <div class="pk">
+        <div>
+          <h3>Khảo thí và luyện nói theo chương trình SGK</h3>
+          <ul class="inc">
+            <li><div><b>Bài đánh giá thích ứng 4 kỹ năng</b><span>Tham chiếu CEFR. Khảo thí đầu năm, giữa năm và cuối năm để theo dõi tiến bộ. Gửi báo cáo cho phụ huynh và nhà trường.</span></div></li>
+            <li><div><b>ICANKid Speaking app <span class="tag">Miễn phí 1 năm học</span></b><span>Học sinh luyện nói bám sát bài học trên lớp. Giáo viên giao bài và theo dõi tiến bộ của lớp. Có chứng nhận thẩm định phù hợp của Trường Đại học Giáo dục.</span></div></li>
+            <li><div><b>Chương trình bổ trợ chung</b><span>Workshop, CLB, lịch hoạt động.</span></div></li>
+            <li><div><b>Học bổng bổ trợ</b><span>Dành cho giáo viên và học sinh.</span></div></li>
+          </ul>
+        </div>
+        <figure style="margin:0"><div class="shot"><img src="img/report.jpg" alt="Thẻ báo cáo năng lực minh họa, mức A2 với 4 kỹ năng"></div><figcaption class="cap">Báo cáo ICANPath (bản demo)</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="panel card" role="tabpanel" id="p-thcs" aria-labelledby="tab-thcs" hidden>
+      <div class="pk">
+        <div>
+          <h3>Đánh giá tiếng Anh và định hướng nghề nghiệp</h3>
+          <ul class="inc">
+            <li><div><b>Bài đánh giá tiếng Anh thích ứng</b><span>Xác định trình độ hiện tại ở cả 4 kỹ năng và mức cần đạt trước lớp 10.</span></div></li>
+            <li><div><b>Holland test</b><span>Dựa trên mô hình Holland (RIASEC), được dùng rộng rãi trong tư vấn hướng nghiệp. Giúp học sinh hiểu rõ sở thích và thiên hướng của mình, hỗ trợ trường thực hiện nội dung hướng nghiệp theo Chương trình GDPT 2018.</span></div></li>
+            <li><div><b>Chương trình bổ trợ chung</b><span>Workshop, CLB, lịch hoạt động.</span></div></li>
+            <li><div><b>Học bổng bổ trợ</b><span>Dành cho giáo viên và học sinh.</span></div></li>
+          </ul>
+        </div>
+        <div class="card" style="background:var(--soft)">
+          <h3>Báo cáo kết hợp (minh họa)</h3>
+          <div class="lv"><div><b>A2+</b><span>Tiếng Anh</span></div><div><b style="font-size:18px">Nghiên cứu, Sáng tạo</b><span>Nhóm sở thích nổi trội (Holland)</span></div></div>
+          <p style="margin-top:14px;font-weight:600">Gợi ý định hướng</p>
+          <ul class="dots"><li>Tham khảo các ngành khoa học và công nghệ, thiết kế.</li><li>Mục tiêu tiếng Anh là B1 trước lớp 10.</li><li>Ưu tiên luyện kỹ năng nói.</li></ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel card" role="tabpanel" id="p-thpt" aria-labelledby="tab-thpt" hidden>
+      <div class="pk">
+        <div>
+          <h3>Đánh giá năng lực, hướng nghiệp và chuẩn bị kỳ thi</h3>
+          <ul class="inc">
+            <li><div><b>Bài đánh giá thích ứng</b><span>Đánh giá 4 kỹ năng tiếng Anh theo mức tham chiếu CEFR. Theo dõi tiến bộ qua các đợt.</span></div></li>
+            <li><div><b>Thi thử ĐGNL theo đợt</b><span>Học sinh làm quen với cấu trúc bài thi đánh giá năng lực và áp lực thời gian. Báo cáo cho biết điểm mạnh, điểm yếu theo từng phần thi. Lịch thi thử thống nhất theo kế hoạch năm học của trường.</span></div></li>
+            <li><div><b>Holland test</b><span>Tìm hiểu sở thích, định hướng nghề nghiệp để có căn cứ chọn khối ngành và trường đại học.</span></div></li>
+            <li><div><b>Chương trình bổ trợ chung và học bổng bổ trợ</b><span>Workshop, CLB, lịch hoạt động; học bổng cho giáo viên và học sinh.</span></div></li>
+          </ul>
+        </div>
+        <figure style="margin:0"><div class="shot"><img src="img/skills.jpg" alt="Biểu đồ năng lực 4 kỹ năng: Nghe B1, Đọc B1, Nói A2, Viết A2"></div><figcaption class="cap">Báo cáo 4 kỹ năng (bản demo)</figcaption></figure>
+      </div>
+    </div>
+
+    <h3 style="margin-top:44px">Bảng tổng hợp</h3>
+    <div class="tblwrap">
+      <table class="stack">
+        <thead><tr><th>Cấu phần</th><th>Tiểu học</th><th>THCS</th><th>THPT</th></tr></thead>
+        <tbody id="tbl"></tbody>
+      </table>
+    </div>
+    <p class="cap">● Có trong gói</p>
+  </div>
+</section>
+
+<section class="band" id="muc-ho-tro">
+  <div class="wrap">
+    <p class="kick">Các mức hỗ trợ</p>
+    <h2>Bắt đầu từ khảo thí, mở rộng theo nhu cầu</h2>
+    <div class="grid g3">
+      <div class="card tier"><p class="kick" style="margin:0">Mức 1 (cơ bản)</p><h3>Khảo thí chuẩn hóa</h3><ul class="dots"><li>Bài đánh giá thích ứng 4 kỹ năng theo mức tham chiếu CEFR.</li><li>Báo cáo cho học sinh, phụ huynh và nhà trường.</li></ul><span class="st">Sẵn sàng triển khai ngay</span></div>
+      <div class="card tier t2"><p class="kick" style="margin:0">Mức 2 (nâng cao)</p><h3>Công cụ tạo bài theo chương trình</h3><ul class="dots"><li>Gồm toàn bộ Mức 1.</li><li>Giáo viên tạo bài thực hành, ôn tập hoặc kiểm tra theo chương trình đang dạy để đánh giá mức độ tiếp thu.</li></ul><span class="st">Cùng nhà trường xây dựng</span></div>
+      <div class="card tier t3"><p class="kick" style="margin:0">Mức 3 (toàn diện)</p><h3>Công cụ ôn tập và luyện thêm</h3><ul class="dots"><li>Gồm toàn bộ Mức 2.</li><li>Thiết kế bài ôn và luyện theo nhu cầu riêng, dùng trước, trong và sau mỗi đợt thi hoặc dùng thường xuyên.</li></ul><span class="st">Cùng nhà trường xây dựng</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="band alt" id="bo-tro">
+  <div class="wrap">
+    <p class="kick">Chương trình bổ trợ chung (mọi cấp học)</p>
+    <h2>Đồng hành cùng cộng đồng nhà trường</h2>
+    <div class="split">
+      <div class="grid g2" style="margin-top:0">
+        <div class="card"><h3>Workshop cho phụ huynh và học sinh</h3><p>Hướng nghiệp, tiếng Anh, các kỳ thi, hỗ trợ tâm lý tuổi teen và đồng hành mùa thi.</p></div>
+        <div class="card"><h3>Workshop chuyên môn cho giáo viên</h3><p>Tổ chức khảo thí, đọc và dùng báo cáo, phương pháp dạy nghe, nói và chia nhóm theo trình độ.</p></div>
+        <div class="card"><h3>CLB tiếng Anh và bảng tin song ngữ</h3><p>Nội dung có sẵn cho câu lạc bộ, bảng tin và góc tiếng Anh song ngữ của trường.</p></div>
+        <div class="card"><h3>Lịch hoạt động chung</h3><p>Một lịch chung cả năm học cho khảo thí, workshop và CLB, theo kế hoạch của trường.</p></div>
+      </div>
+      <div class="shot"><img src="img/community.jpg" alt="Minh họa: Mỗi bước của em, đều có người đồng hành"></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="lich">
+  <div class="wrap">
+    <p class="kick">Lịch hoạt động kết hợp</p>
+    <h2>Lịch mẫu cho một năm học</h2>
+    <div class="tblwrap">
+      <table class="stack">
+        <thead><tr><th>Giai đoạn</th><th>Khảo thí và thi thử</th><th>Giáo viên</th><th>Phụ huynh và học sinh</th><th>CLB và bảng tin</th></tr></thead>
+        <tbody id="cal"></tbody>
+      </table>
+    </div>
+    <p class="cap">Điều chỉnh lịch theo kế hoạch năm học và cấp học của từng trường.</p>
+  </div>
+</section>
+
+<section class="band alt" id="chi-phi">
+  <div class="wrap">
+    <p class="kick">Chi phí</p>
+    <h2>Gói đồng hành miễn phí</h2>
+    <div class="cost">
+      <div class="zero"><b>0 đồng</b><span>Cho nhà trường, giáo viên, học sinh và phụ huynh</span></div>
+      <div class="grid g2" style="margin-top:0">
+        <div class="card"><h3>Galaxy Education đảm nhận</h3><ul class="dots"><li>Cung cấp hệ thống khảo thí, đề, chấm bài và báo cáo.</li><li>Tổ chức các đợt thi, thi thử và hỗ trợ kỹ thuật.</li><li>Tổ chức workshop, cung cấp nội dung CLB và bảng tin.</li></ul></div>
+        <div class="card"><h3>Nhà trường phối hợp</h3><ul class="dots"><li>Cử một đầu mối phụ trách.</li><li>Bố trí thời gian, phòng học hoặc thiết bị.</li><li>Thông tin tới phụ huynh và học sinh.</li></ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="lo-trinh">
+  <div class="wrap">
+    <p class="kick">Lộ trình triển khai</p>
+    <h2>Bắt đầu ngay trong học kỳ này</h2>
+    <div class="grid g2">
+      <div class="card tier"><p class="kick" style="margin:0">Giai đoạn đầu</p><h3 style="font-size:24px;color:var(--blue)">T11/2026 – T02/2027</h3><ul class="dots"><li>Khảo thí thích ứng đợt 1 cho các khối đăng ký.</li><li>Tập huấn giáo viên, workshop cho phụ huynh.</li><li>Ghi nhận nhu cầu Mức 2 và Mức 3.</li></ul></div>
+      <div class="card tier t2"><p class="kick" style="margin:0">Năm 2027</p><h3 style="font-size:24px;color:var(--blue)">T03 – T12/2027</h3><ul class="dots"><li>Khảo thí định kỳ, thi thử ĐGNL theo đợt.</li><li>Holland test và workshop hướng nghiệp.</li><li>Đề theo chương trình (Mức 2), ôn và luyện theo nhu cầu (Mức 3).</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="band alt" id="faq">
+  <div class="wrap">
+    <p class="kick">Câu hỏi thường gặp</p>
+    <h2>Nhà trường thường hỏi gì về ICANPath?</h2>
+    <div style="margin-top:24px;max-width:860px">
+      <details open><summary>Kết quả có phải chứng chỉ CEFR?</summary><p>Bài đánh giá chẩn đoán cho biết mức tham chiếu theo khung CEFR. Kết quả không thay thế chứng chỉ quốc tế.</p></details>
+      <details><summary>Nếu trường thiếu phòng máy thì sao?</summary><p>Trường có thể chia ca theo lớp, dùng máy tính bảng hoặc điện thoại. Học sinh cũng có thể làm bài tại nhà trong khung giờ quy định.</p></details>
+      <details><summary>Kết quả có ảnh hưởng đến điểm số, học bạ?</summary><p>Kết quả không ảnh hưởng đến điểm số hay học bạ. Nhà trường quyết định cách dùng kết quả để tham khảo và hỗ trợ dạy học.</p></details>
+      <details><summary>Dữ liệu học sinh được bảo vệ ra sao?</summary><p>Báo cáo cá nhân chỉ chia sẻ cho phụ huynh qua đường dẫn riêng. Nhà trường xem báo cáo tổng hợp qua đường dẫn riêng của trường.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="band contact" id="lien-he">
+  <div class="wrap">
+    <div>
+      <h2>Cùng nhà trường hiểu rõ năng lực và định hướng của từng học sinh</h2>
+      <p>Ba bước để bắt đầu:</p>
+      <ol class="next"><li>1. Chọn khối, lớp tham gia</li><li>2. Chốt lịch tập huấn và thi</li><li>3. Cử đầu mối phối hợp</li></ol>
+      <p>Liên hệ chuyên viên Galaxy Education phụ trách trường để đăng ký và nhận báo cáo mẫu.</p>
+    </div>
+    <div class="peri"><img src="img/peri.jpg" alt="Peri vẫy tay chào"><b>ICANPath</b></div>
+  </div>
+</section>
+
+<footer>ICANPath · ICAN CONNECT – A brand of Galaxy Education · Năm học 2026-2027</footer>
+
+<script>
+{
+const dist=[["Pre-A1",4],["A1",18],["A2",38],["B1",28],["B2+",12]];
+const mx=Math.max(...dist.map(d=>d[1]));
+document.getElementById('dist').innerHTML=dist.map(([l,v])=>`<div class="row${v===mx?' top':''}"><span>${l}</span><div class="bar"><i style="width:${v/mx*100}%"></i></div><em>${v}%</em></div>`).join('');
+
+const rows=[["Bài đánh giá thích ứng 4 kỹ năng tiếng Anh",1,1,1],["ICANKid Speaking app, luyện nói theo chương trình SGK (miễn phí 1 năm học)",1,0,0],["Holland test, khám phá sở thích và định hướng nghề nghiệp",0,1,1],["Thi thử Đánh giá năng lực (ĐGNL) theo đợt",0,0,1],["Chương trình bổ trợ chung (workshop, CLB, lịch hoạt động)",1,1,1],["Chương trình học bổng bổ trợ cho giáo viên và học sinh",1,1,1]];
+document.getElementById('tbl').innerHTML=rows.map(r=>`<tr><td>${r[0]}</td>${r.slice(1).map(x=>`<td class="c">${x?'●':''}</td>`).join('')}</tr>`).join('');
+
+const cal=[["Đầu năm học (T9-T11)","Adaptive test đợt 1, Holland test (THCS, THPT)","Tập huấn tổ chức khảo thí, đọc báo cáo","Workshop tìm hiểu kết quả và hướng nghiệp","Khởi động CLB tiếng Anh, bảng tin song ngữ"],["Giữa kỳ I (T11-T12)","Thi thử ĐGNL đợt 1 (THPT)","Workshop chia nhóm, dạy nghe và nói","Workshop hỗ trợ tâm lý tuổi teen","Chủ đề CLB theo tháng"],["Học kỳ II (T1-T3)","Adaptive test đợt 2, thi thử ĐGNL đợt 2","Workshop chuyên môn theo nhu cầu","Workshop về các kỳ thi và tiếng Anh","Ngày hội tiếng Anh"],["Cuối năm (T4-T5)","Adaptive test đợt 3 để đo tiến bộ","Tổng kết, chia sẻ kinh nghiệm","Workshop đồng hành mùa thi","Tổng kết CLB"]];
+document.getElementById('cal').innerHTML=cal.map(r=>`<tr>${r.map((c,i)=>i?`<td>${c}</td>`:`<td><b style="color:var(--blue)">${c}</b></td>`).join('')}</tr>`).join('');
+
+const tabs=[...document.querySelectorAll('[role=tab]')];
+const show=t=>{tabs.forEach(b=>{const on=b===t;b.setAttribute('aria-selected',on);b.tabIndex=on?0:-1;document.getElementById(b.getAttribute('aria-controls')).hidden=!on})};
+tabs.forEach((b,i)=>{b.addEventListener('click',()=>show(b));b.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){const n=tabs[(i+(e.key==='ArrowRight'?1:tabs.length-1))%tabs.length];show(n);n.focus()}})});
+}
+</script>
+</body>
+</html>
