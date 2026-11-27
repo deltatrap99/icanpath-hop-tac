@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ICANKid School Access</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap&subset=vietnamese" rel="stylesheet">
+<style>
+:root{color-scheme:light dark;
+--bg:light-dark(#ffffff,#0f1a2e);--soft:light-dark(#f2f8e9,#15243a);--card:light-dark(#ffffff,#1b2c46);
+--ink:light-dark(#1b2440,#eef3fb);--mute:light-dark(#4d5873,#b6c2d8);--line:light-dark(#e3e9f2,#2a3d5c);
+--blue:#1f5fbf;--blue2:light-dark(#1f5fbf,#7fb0ff);--green:#7cb82f;--green2:light-dark(#4f8a14,#a6dc5d);
+--pink:#e2358a;--pink2:light-dark(#c81f74,#ff8cc4);--orange:#f7830d;--orange2:light-dark(#c25f00,#ffb15c);--yellow:#ffc928}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Be Vietnam Pro",system-ui,sans-serif;overflow-x:clip}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:"Baloo 2","Be Vietnam Pro",sans-serif;line-height:1.08;margin:0;text-wrap:balance}
+h2{font-size:clamp(32px,4.4vw,48px)}h3{font-size:22px;line-height:1.2}
+p{margin:0}
+.band{padding:clamp(48px,7vw,96px) max(5vw,16px)}
+.wrap{max-width:1240px;margin:0 auto}
+.lead{font-size:17px;color:var(--mute);max-width:66ch}
+nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:20px;padding:10px max(5vw,16px);max-width:none}
+nav .logo{height:34px;width:auto;flex:none}
+.links{display:flex;align-items:center;gap:4px;margin-left:auto}
+.dd{position:relative}
+.dd button{font:600 14px "Be Vietnam Pro",sans-serif;color:var(--ink);background:none;border:0;padding:10px 12px;border-radius:999px;cursor:pointer;min-height:44px}
+.dd button:hover,.dd button:focus-visible,.dd.open button{background:var(--soft);outline:none}
+.ddm{display:none;position:absolute;top:calc(100% + 6px);left:0;min-width:230px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:8px;box-shadow:0 14px 30px rgba(20,40,80,.14);z-index:30}
+.ddm::before{content:"";position:absolute;left:0;right:0;top:-8px;height:8px}
+.dd:hover .ddm,.dd:focus-within .ddm,.dd.open .ddm{display:grid}
+.ddm a{border-radius:10px;padding:10px 12px}
+.dd:last-child .ddm{left:auto;right:0}
+.links a{flex:none;color:var(--ink);text-decoration:none;font-weight:600;font-size:14px;padding:10px 12px;border-radius:999px}
+.links a:hover,.links a:focus-visible{background:var(--soft);outline:none}
+.hero{position:relative;aspect-ratio:16/10;max-height:none;background:#eaf6dc url(/icankid/img/hero.jpg) center/cover no-repeat;display:flex;align-items:flex-start}
+.hero .wrap{width:100%;max-width:none;padding:clamp(56px,8vw,140px) 0 0 5vw}
+.hero-box{width:40vw;max-width:620px}
+.hero h1{font-size:clamp(30px,3.7vw,64px);color:#1b2440}
+.hero h1 span{display:block;color:var(--blue)}
+.hero .sub{margin-top:clamp(10px,1.2vw,18px);font-size:clamp(15px,1.3vw,20px);font-weight:600;color:#1b2440}
+.hero-img{display:none}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:clamp(16px,2vw,28px)}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:999px;font-weight:700;text-decoration:none;font-size:16px}
+.btn.p{background:var(--pink);color:#fff;box-shadow:0 6px 0 #a3185d}
+.btn.s{background:#fff;color:var(--blue);border:2px solid var(--blue)}
+.btn:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+.tag{display:inline-flex;align-items:center;gap:12px;margin-bottom:14px;font-weight:700;color:var(--c2)}
+.tag b{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:var(--c);color:#fff;font:800 24px "Baloo 2",sans-serif;box-shadow:0 4px 0 color-mix(in srgb,var(--c) 70%,#000)}
+.c-green{--c:var(--green);--c2:var(--green2)}.c-orange{--c:var(--orange);--c2:var(--orange2)}.c-pink{--c:var(--pink);--c2:var(--pink2)}.c-blue{--c:var(--blue);--c2:var(--blue2)}
+.head{display:grid;gap:14px;margin-bottom:40px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px;display:grid;gap:10px;align-content:start}
+.card .n,.lp .n{font:800 15px "Baloo 2",sans-serif;color:#fff;background:var(--c);width:34px;height:34px;border-radius:50%;display:grid;place-items:center}
+.card h3{color:var(--c2)}
+.card p{color:var(--mute)}
+.soft{background:var(--soft)}
+.ctx{display:grid;grid-template-columns:1.15fr 1fr;gap:28px;align-items:stretch}
+.need{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.need span{background:color-mix(in srgb,var(--orange) 16%,transparent);color:var(--orange2);font-weight:700;padding:8px 16px;border-radius:999px}
+.who{display:grid;gap:16px}
+.who .card{border-left:6px solid var(--orange)}
+.bridge{margin-top:28px;background:var(--green);color:#16310a;font-weight:600;font-size:17px;padding:20px 26px;border-radius:20px}
+.why{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:32px;align-items:center}
+.q{position:relative;background:var(--card);border-radius:28px;overflow:hidden;border:1px solid var(--line)}
+.q img{width:100%;aspect-ratio:3/2;object-fit:cover;background:#fff7e0}
+.q p{padding:22px 26px;font:700 21px/1.35 "Baloo 2",sans-serif;color:var(--ink)}
+.pieces{display:grid;gap:14px}
+.piece{display:grid;grid-template-columns:56px 1fr;gap:16px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 20px}
+.piece i{width:56px;height:56px;border-radius:16px;background:var(--c);display:grid;place-items:center;color:#fff;font:800 22px "Baloo 2";font-style:normal}
+.piece h3{font-size:19px}.piece p{color:var(--mute);font-size:15px}
+.not{font:700 20px "Baloo 2",sans-serif;color:var(--green2);margin-bottom:4px}
+.mv{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.mv .card{padding:34px;gap:16px}
+.four{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.four div{background:color-mix(in srgb,var(--pink) 10%,transparent);border-radius:16px;padding:14px 16px}
+.four b{display:block;color:var(--pink2);font:800 18px "Baloo 2",sans-serif}
+.four span{font-size:14.5px;color:var(--mute)}
+.quote{font:700 22px/1.3 "Baloo 2",sans-serif;color:#fff;background:var(--pink);padding:18px 22px;border-radius:18px}
+.belief{border-left:5px solid var(--blue);padding:4px 0 4px 18px;font-weight:600}
+.vq{background:color-mix(in srgb,var(--blue) 10%,transparent);border-radius:16px;padding:16px 18px;color:var(--blue2);font-weight:700}
+.tl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;position:relative}
+.tl::before{content:"";position:absolute;left:0;right:0;top:21px;height:4px;background:linear-gradient(90deg,var(--pink),var(--orange));border-radius:4px}
+.step{position:relative;padding-top:58px}
+.yr{position:absolute;top:0;left:0;background:var(--pink);color:#fff;font:800 18px "Baloo 2";padding:8px 16px;border-radius:999px}
+.step .card{border-top:5px solid var(--pink);height:100%}
+.big{font:800 40px/1 "Baloo 2",sans-serif;color:var(--pink2)}
+.loop{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;counter-reset:l}
+.lp{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px 18px;position:relative;display:grid;gap:6px;align-content:start}
+.lp:not(:last-child)::after{content:"→";position:absolute;right:-13px;top:50%;transform:translateY(-50%);color:var(--orange);font:800 22px "Baloo 2";z-index:1}
+.lp .n{background:var(--orange)}
+.lp h3{font-size:20px;color:var(--orange2)}
+.lp p{color:var(--mute);font-size:14.5px}
+.loopnote{margin-top:18px;display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center;background:color-mix(in srgb,var(--green) 22%,transparent);border-radius:18px;padding:18px 22px}
+.loopnote b{font-family:"Baloo 2";font-size:19px;color:var(--green2)}
+.phones-wrap{margin-top:44px;position:relative}
+.phones{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 4px 20px;scrollbar-width:thin}
+.phone{flex:0 0 clamp(190px,22vw,250px);scroll-snap-align:start;margin:0}
+.phone img{border-radius:30px;border:8px solid #1b2440;box-shadow:0 16px 30px rgba(20,40,80,.18);aspect-ratio:500/1082;object-fit:cover;width:100%}
+.phone figcaption{text-align:center;font-weight:600;font-size:14px;color:var(--mute);margin-top:10px}
+.arrows{display:flex;gap:10px;justify-content:flex-end;margin-bottom:12px}
+.arrows button{width:44px;height:44px;border-radius:50%;border:2px solid var(--blue2);background:var(--card);color:var(--blue2);font:800 20px "Baloo 2";cursor:pointer}
+.arrows button:focus-visible{outline:3px solid var(--yellow)}
+.dash .card{border-top:5px solid var(--blue)}
+.dash .n{background:var(--blue)}
+.dash h3{color:var(--blue2);font-size:19px}
+.shots{display:grid;grid-template-columns:1.4fr 1fr;gap:18px;margin-top:36px}
+.shots figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:10px;display:grid;gap:8px}
+.shots figure:first-child{grid-row:span 2}
+.shots img{border-radius:10px;width:100%;height:100%;object-fit:cover;object-position:top left}
+.shots figcaption{font-size:14px;color:var(--mute);font-weight:600;padding:0 6px 4px}
+.tech{margin-top:28px;text-align:center;font:700 clamp(20px,2.4vw,26px)/1.3 "Baloo 2",sans-serif;color:#fff;background:var(--pink);border-radius:22px;padding:22px}
+.tech span{display:block;font:500 16px "Be Vietnam Pro";opacity:.95;margin-top:4px}
+.close{background:url(/icankid/img/kids-group.jpg) right bottom/auto 100% no-repeat,linear-gradient(#f5fbee 0 61%,#b7da8d 61%);min-height:560px;display:flex;align-items:center}
+.close .wrap{width:100%}
+.close-box{max-width:460px;background:rgba(255,255,255,.92);border-radius:28px;padding:34px;display:grid;gap:16px;color:#1b2440;box-shadow:0 20px 40px rgba(30,60,20,.15)}
+.close-box h2{font-size:clamp(28px,3.4vw,40px);color:#1b2440}
+.close-box .slog{font:800 22px/1.25 "Baloo 2";color:#4f8a14}
+footer{padding:28px max(5vw,16px);border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between;color:var(--mute);font-size:14px}
+footer img{height:30px;width:auto}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+@media(max-width:1000px){.loop{grid-template-columns:repeat(3,minmax(0,1fr))}.lp::after{display:none}.grid4{grid-template-columns:repeat(2,minmax(0,1fr))}.tl{grid-template-columns:repeat(2,minmax(0,1fr))}.tl::before{display:none}}
+@media(max-width:860px){.ctx,.why,.mv,.shots{grid-template-columns:minmax(0,1fr)}.shots figure:first-child{grid-row:auto}.grid3{grid-template-columns:minmax(0,1fr)}
+ .hero{aspect-ratio:auto;background:#eef8e3;display:block}.hero .wrap{padding:36px max(5vw,16px) 24px}.hero-box{width:auto;max-width:none}.hero h1{font-size:clamp(32px,7vw,48px)}.hero .sub{font-size:17px}.hero-img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:78% center}}
+@media(max-width:600px){.links{display:none}.loop,.grid4,.tl,.four{grid-template-columns:minmax(0,1fr)}.loopnote{grid-template-columns:minmax(0,1fr)}
+.close{min-height:auto;padding-bottom:300px;background:url(/icankid/img/kids-group.jpg) center bottom/auto 300px no-repeat,linear-gradient(#f5fbee 0 calc(100% - 117px),#b7da8d calc(100% - 117px))}.close-box{padding:24px}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <img class="logo" src="/icankid/img/logo.png" alt="ICANKid">
+  <div class="links">
+    <a href="#co-hoi">Cơ hội</a><a href="#boi-canh">Bối cảnh</a><div class="dd"><button type="button" aria-expanded="false">Về ICANKid <span aria-hidden="true">▾</span></button>
+      <div class="ddm"><a href="#vi-sao">Vì sao ICANKid ra đời</a><a href="#su-menh">Sứ mệnh &amp; Tầm nhìn</a><a href="#hanh-trinh">Hành trình ICANKid</a></div></div><div class="dd"><button type="button" aria-expanded="false">Sản phẩm <span aria-hidden="true">▾</span></button>
+      <div class="ddm"><a href="#app">App ICANKid</a><a href="#dashboard">Teacher Dashboard</a></div></div>
+  </div>
+</div></nav>
+
+<header class="hero">
+  <div class="wrap"><div class="hero-box">
+    <h1>Thêm cơ hội luyện nói <span>Thêm tự tin mở lời</span></h1>
+    <p class="sub">Dành riêng cho học sinh Tiểu học</p>
+    <div class="cta"><a class="btn p" href="#co-hoi">Tìm hiểu dự án</a><a class="btn s" href="#app">Xem App ICANKid</a></div>
+  </div></div>
+  <img class="hero-img" src="/icankid/img/hero.jpg" alt="Học sinh Tiểu học cùng các mascot ICANKid">
+</header>
+
+<section class="band" id="co-hoi">
+  <div class="wrap">
+    <div class="head rv c-green">
+      <div class="tag"><b>1</b>Cơ hội cho mọi trẻ</div>
+      <h2>Mở rộng cơ hội học tiếng Anh cho học sinh Tiểu học ở mọi vùng miền</h2>
+      <p class="lead">ICANKid hướng tới mở rộng cơ hội học tiếng Anh cho học sinh Tiểu học theo hình thức online, đến mọi vùng miền trên khắp Việt Nam. Chương trình có ba điểm ưu việt:</p>
+    </div>
+    <div class="grid3">
+      <div class="card rv c-green"><span class="n">1</span><h3>Được luyện tập</h3><p>Thêm cơ hội nghe, nói và sử dụng tiếng Anh thường xuyên, ngay trong môi trường học tập của trẻ.</p></div>
+      <div class="card rv c-green"><span class="n">2</span><h3>Được tiếp cận</h3><p>Kết nối học liệu, công nghệ và môi trường giao tiếp để bổ trợ cho việc học tại địa phương.</p></div>
+      <div class="card rv c-green"><span class="n">3</span><h3>Được đồng hành</h3><p>Có giáo viên dẫn dắt, tạo động lực và ghi nhận từng bước tiến của học sinh.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band soft" id="boi-canh">
+  <div class="wrap">
+    <div class="head rv c-orange">
+      <div class="tag"><b>2</b>Bối cảnh</div>
+      <h2>Trẻ cần nhiều hơn một bài học tiếng Anh</h2>
+    </div>
+    <div class="ctx">
+      <div class="card rv c-orange" style="gap:16px">
+        <p>Tiếng Anh ngày càng trở thành một năng lực thiết yếu. Tuy nhiên, cơ hội để học sinh Tiểu học được nghe, được nói và sử dụng tiếng Anh trong thực tế vẫn còn nhiều khác biệt.</p>
+        <h3>Trẻ cần:</h3>
+        <div class="need"><span>Môi trường giao tiếp</span><span>Thời gian luyện tập</span><span>Người đồng hành</span></div>
+      </div>
+      <div class="who">
+        <p class="rv" style="font-weight:700;color:var(--mute)">Trong khi đó…</p>
+        <div class="card rv c-orange"><h3>Giáo viên</h3><p>Đang phải dành nhiều thời gian cho những công việc lặp lại như giao bài, chấm sửa và theo dõi tiến độ. Có ít thời gian cho việc luyện nói và phản hồi 1:1.</p></div>
+        <div class="card rv c-orange"><h3>Gia đình</h3><p>Các chương trình học bổ trợ ngoài giờ có thể tạo thêm áp lực về thời gian và chi phí cho gia đình.</p></div>
+      </div>
+    </div>
+    <p class="bridge rv">ICANKid được phát triển với mong muốn kết nối những mảnh ghép còn thiếu trong hành trình học tiếng Anh của trẻ: công nghệ, giáo viên bản ngữ và giáo viên địa phương.</p>
+  </div>
+</section>
+
+<section class="band" id="vi-sao">
+  <div class="wrap">
+    <div class="head rv c-green">
+      <div class="tag"><b>3</b>Tại sao ICANKid ra đời?</div>
+      <h2>Từ một khoảng trống, ICANKid ra đời từ một câu hỏi</h2>
+    </div>
+    <div class="why">
+      <figure class="q rv" style="margin:0">
+        <img src="/icankid/img/kids-think.webp" alt="Hai học sinh Tiểu học đang suy nghĩ">
+        <p>Làm thế nào để mỗi học sinh Tiểu học Việt Nam đều có thể tự tin sử dụng tiếng Anh, để tự do khám phá, tự tin giao tiếp và học tập?</p>
+      </figure>
+      <div class="pieces">
+        <p class="not rv">Câu trả lời không phải là thêm một lớp học.</p>
+        <div class="piece rv c-blue"><i>AI</i><div><h3>Công nghệ</h3><p>Tạo thêm cơ hội luyện tập, phản hồi và cá nhân hóa.</p></div></div>
+        <div class="piece rv c-pink"><i>EN</i><div><h3>Giáo viên bản ngữ</h3><p>Tạo môi trường giao tiếp thực tế.</p></div></div>
+        <div class="piece rv c-orange"><i>VN</i><div><h3>Giáo viên địa phương</h3><p>Đồng hành, dẫn dắt và kết nối với học sinh.</p></div></div>
+        <p class="bridge rv" style="margin-top:4px">ICANKid ra đời để kết nối tất cả những mảnh ghép rời rạc thành một hành trình trọn vẹn.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band soft" id="su-menh">
+  <div class="wrap mv">
+    <div class="card rv c-pink">
+      <div class="tag"><b>4</b>Sứ mệnh</div>
+      <h2 style="font-size:clamp(28px,3vw,36px)">Mở rộng cơ hội tiếp cận giáo dục tiếng Anh chất lượng</h2>
+      <p style="color:var(--mute)">ICANKid mong muốn mỗi học sinh Tiểu học Việt Nam đều có thêm cơ hội:</p>
+      <div class="four">
+        <div><b>Nghe</b><span>Tiếp xúc với tiếng Anh thường xuyên.</span></div>
+        <div><b>Nói</b><span>Có môi trường để thực hành.</span></div>
+        <div><b>Thử</b><span>Không sợ sai, không sợ bị đánh giá.</span></div>
+        <div><b>Được ghi nhận</b><span>Nhìn thấy sự tiến bộ của chính mình.</span></div>
+      </div>
+      <p class="quote">“Mỗi học sinh Tiểu học Việt Nam đều có thể tự tin sử dụng tiếng Anh.”</p>
+    </div>
+    <div class="card rv c-blue">
+      <div class="tag"><b>5</b>Tầm nhìn</div>
+      <h2 style="font-size:clamp(28px,3vw,36px)">Một Việt Nam nơi cơ hội học tập không phụ thuộc vào hoàn cảnh</h2>
+      <p style="color:var(--mute)">ICANKid hướng tới một tương lai mà:</p>
+      <p class="vq">Mọi học sinh đều có cơ hội tiếp cận nguồn học liệu, môi trường luyện tập và những người đồng hành cần thiết để phát huy tiềm năng.</p>
+      <p class="belief">ICANKid tin rằng: trẻ không cần nói tiếng Anh hoàn hảo ngay từ đầu. Điều quan trọng hơn là mỗi ngày, con có thêm một cơ hội để mở lời, thử sức và tiến bộ.</p>
+      <p style="color:var(--mute)">Từ đó, tiếng Anh không chỉ dừng lại ở một môn học, mà trở thành hành trang giúp trẻ tự tin bước vào tương lai.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="hanh-trinh">
+  <div class="wrap">
+    <div class="head rv c-pink">
+      <div class="tag"><b>6</b>Hành trình ICANKid</div>
+      <h2>Từ một ứng dụng học tập đến một dự án tạo tác động cộng đồng</h2>
+    </div>
+    <div class="tl">
+      <div class="step rv"><span class="yr">2021</span><div class="card"><h3>Khởi đầu từ một ứng dụng học tập</h3><p>ICANKid ra đời với định hướng “Chơi mà học, học mà chơi”, dành cho trẻ 3–8 tuổi.</p></div></div>
+      <div class="step rv"><span class="yr">2021–2024</span><div class="card"><h3>Lớn lên cùng hàng triệu gia đình Việt</h3><p>Tiếp cận và đồng hành cùng</p><p class="big">1,5+ triệu</p><p>học sinh. Qua quá trình đó, ICANKid nhận ra: trẻ cần nhiều hơn một công cụ học tập.</p></div></div>
+      <div class="step rv"><span class="yr">2025–nay</span><div class="card"><h3>Từ một ứng dụng đến môi trường học tiếng Anh toàn diện</h3><p>Tích hợp AI + môi trường giao tiếp cùng giáo viên bản ngữ + giáo viên địa phương. Trẻ không chỉ cần học tiếng Anh, mà cần được sống trong môi trường sử dụng tiếng Anh mỗi ngày.</p></div></div>
+      <div class="step rv"><span class="yr">2026</span><div class="card"><h3>Mở rộng tác động</h3><p>Hợp tác cùng các tổ chức giáo dục, nhà trường và địa phương.</p><p><strong>Mục tiêu:</strong> đưa thêm cơ hội luyện nói đến học sinh Tiểu học Việt Nam.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="band soft" id="app">
+  <div class="wrap">
+    <div class="head rv c-orange">
+      <div class="tag"><b>7</b>App ICANKid</div>
+      <h2>Không chỉ “học bài”, mà là một vòng lặp luyện tập</h2>
+      <p class="lead">App ICANKid là nền tảng học tập giúp học sinh chủ động luyện tập tiếng Anh mỗi ngày.</p>
+    </div>
+    <div class="loop">
+      <div class="lp rv c-orange"><span class="n">1</span><h3>Học</h3><p>Tiếp cận kiến thức phù hợp với chương trình.</p></div>
+      <div class="lp rv c-orange"><span class="n">2</span><h3>Luyện</h3><p>Thực hành mỗi ngày cùng AI.</p></div>
+      <div class="lp rv c-orange"><span class="n">3</span><h3>Nhận phản hồi</h3><p>Biết mình đang làm tốt ở đâu và cần cải thiện gì.</p></div>
+      <div class="lp rv c-orange"><span class="n">4</span><h3>Mở lời</h3><p>Thực hành với giáo viên bản ngữ và bạn bè.</p></div>
+      <div class="lp rv c-orange"><span class="n">5</span><h3>Tiến bộ</h3><p>Tự tin hơn → chủ động hơn → tiếp tục học.</p></div>
+    </div>
+    <div class="loopnote rv"><b>Mỗi học sinh luyện tập theo tốc độ của riêng mình.</b><p>ICANKid xây dựng hành trình học tập theo hướng không để trẻ chỉ “học tiếng Anh”, mà từng bước hình thành khả năng sử dụng tiếng Anh.</p></div>
+    <div class="phones-wrap rv">
+      <div class="arrows"><button id="pv" aria-label="Màn hình trước">‹</button><button id="nx" aria-label="Màn hình tiếp">›</button></div>
+      <div class="phones" id="phones" tabindex="0" aria-label="Màn hình App ICANKid">
+        <figure class="phone"><img src="/icankid/img/app-1.jpg" alt="Màn hình chào mừng App ICANKid" loading="lazy"><figcaption>Bắt đầu hành trình</figcaption></figure>
+        <figure class="phone"><img src="/icankid/img/app-2.jpg" alt="Trang chủ học sinh với nhiệm vụ và Speaking Club" loading="lazy"><figcaption>Nhiệm vụ &amp; Speaking Club</figcaption></figure>
+        <figure class="phone"><img src="/icankid/img/app-3.jpg" alt="Bài luyện nghe và nói" loading="lazy"><figcaption>Luyện nghe – nói cùng AI</figcaption></figure>
+        <figure class="phone"><img src="/icankid/img/app-4.jpg" alt="Màn hình phản hồi sau buổi học" loading="lazy"><figcaption>Nhận phản hồi sau buổi học</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band dash" id="dashboard">
+  <div class="wrap">
+    <div class="head rv c-blue">
+      <div class="tag"><b>8</b>Teacher Dashboard</div>
+      <h2>Để giáo viên có thêm thời gian cho điều quan trọng nhất</h2>
+    </div>
+    <div class="grid4">
+      <div class="card rv c-blue"><span class="n">1</span><h3>Giao bài</h3><p>Dễ dàng giao nội dung luyện tập.</p></div>
+      <div class="card rv c-blue"><span class="n">2</span><h3>Theo dõi</h3><p>Nắm được hoạt động học tập của học sinh.</p></div>
+      <div class="card rv c-blue"><span class="n">3</span><h3>Xem báo cáo</h3><p>Quan sát tiến độ và kết quả.</p></div>
+      <div class="card rv c-blue"><span class="n">4</span><h3>Ghi nhận &amp; khen thưởng</h3><p>Tạo động lực để trẻ tiếp tục học.</p></div>
+    </div>
+    <div class="shots">
+      <figure class="rv"><img src="/icankid/img/dash-1.jpg" alt="Teacher Dashboard: giáo trình chuẩn và bài đã giao" loading="lazy"><figcaption>Giáo trình chuẩn &amp; quản lý bài đã giao</figcaption></figure>
+      <figure class="rv"><img src="/icankid/img/dash-2.jpg" alt="Teacher Dashboard: danh sách lớp học" loading="lazy"><figcaption>Theo dõi lớp học</figcaption></figure>
+      <figure class="rv"><img src="/icankid/img/dash-3.jpg" alt="Teacher Dashboard: chi tiết buổi Speaking Club" loading="lazy"><figcaption>Chi tiết buổi Speaking Club</figcaption></figure>
+    </div>
+    <p class="tech rv">Công nghệ làm bớt việc lặp lại.<span>Để người thầy có thêm thời gian để hiểu và truyền cảm hứng cho học sinh.</span></p>
+  </div>
+</section>
+
+<section class="band close">
+  <div class="wrap"><div class="close-box rv">
+    <h2>Mỗi lần con dám mở lời là một bước tiến.</h2>
+    <p>Cùng ICANKid, trao cho mỗi đứa trẻ thêm cơ hội để tự tin nói tiếng Anh và mở cánh cửa tương lai.</p>
+    <p class="slog">Thêm cơ hội luyện nói<br>Thêm tự tin mở lời</p>
+  </div></div>
+</section>
+
+<footer><img src="/icankid/img/logo.png" alt="ICANKid"><span>ICANKid – School Access · Dành cho học sinh Tiểu học Việt Nam</span></footer>
+
+<script>
+{
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
+  document.querySelectorAll('.rv').forEach(el => io.observe(el));
+  const dds = [...document.querySelectorAll('.dd')];
+  const setDd = (d, o) => { d.classList.toggle('open', o); d.querySelector('button').setAttribute('aria-expanded', o); };
+  const closeAll = () => dds.forEach(d => setDd(d, false));
+  dds.forEach(d => {
+    d.querySelector('button').addEventListener('click', e => { e.stopPropagation(); const o = !d.classList.contains('open'); closeAll(); setDd(d, o); });
+    d.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { closeAll(); document.activeElement.blur(); }));
+  });
+  document.addEventListener('click', closeAll);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAll(); });
+  const ph = document.getElementById('phones');
+  const go = d => { const f = ph.querySelector('.phone'); ph.scrollBy({ left: d * (f.offsetWidth + 22), behavior: 'smooth' }); };
+  document.getElementById('pv').addEventListener('click', () => go(-1));
+  document.getElementById('nx').addEventListener('click', () => go(1));
+  ph.addEventListener('keydown', e => { if (e.key === 'ArrowLeft') { e.preventDefault(); go(-1); } if (e.key === 'ArrowRight') { e.preventDefault(); go(1); } });
+}
+</script>
+</body>
+</html>
