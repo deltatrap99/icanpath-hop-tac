@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ICANPath – Hợp tác kênh trường 2026-2027</title>
+<meta name="description" content="Thư mời đối tác và đại sứ giáo dục triển khai ICANPath tại nhà trường – Galaxy Education, năm học 2026-2027.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#0057a5; --blue-d:#00427e; --blue-50:#eef4fa; --blue-100:#d6e5f0;
+  --ink:#17364f; --ink-2:#455e72; --muted:#667a8b; --line:#dadfe3;
+  --green:#386619; --green-50:#eef5e6; --orange:#f28c1b; --bg:#f7f9fb; --white:#fff;
+  --r:16px; --shadow:0 1px 2px rgba(23,54,79,.06),0 6px 24px rgba(23,54,79,.06);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:"Be Vietnam Pro",system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+a{color:var(--blue)}
+img{max-width:100%;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{line-height:1.25;letter-spacing:-.01em}
+h2{font-size:clamp(26px,3.4vw,36px);font-weight:700;color:var(--blue)}
+h3{font-size:18px;font-weight:700}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
+.lead{color:var(--ink-2);font-size:17px;max-width:720px;margin-top:10px}
+section{padding:72px 0}
+section.alt{background:var(--bg)}
+.sec-head{margin-bottom:32px}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:20px;height:64px}
+.nav .logo img{height:40px;width:auto}
+.nav nav{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.nav nav::-webkit-scrollbar{display:none}
+.nav nav a{white-space:nowrap;text-decoration:none;color:var(--ink-2);font-size:14px;font-weight:500;padding:8px 12px;border-radius:999px}
+.nav nav a:hover,.nav nav a.on{background:var(--blue-50);color:var(--blue)}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:600;font-size:15px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;font-family:inherit;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--blue);color:#fff}
+.btn-primary:hover{background:var(--blue-d)}
+.btn-ghost{background:#fff;color:var(--blue);border:1.5px solid var(--blue-100)}
+.btn-white{background:#fff;color:var(--blue)}
+.nav .btn{padding:9px 16px;font-size:14px;flex-shrink:0}
+@media (max-width:860px){.nav nav{display:none}.nav .btn{margin-left:auto}}
+
+/* hero */
+.hero{padding:56px 0 40px;background:radial-gradient(1200px 500px at 85% -10%,#e3eefa 0%,rgba(255,255,255,0) 60%)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.pill{display:inline-block;font-size:13px;font-weight:600;color:var(--blue);background:var(--blue-50);padding:6px 12px;border-radius:999px}
+.hero h1{font-size:clamp(36px,5.6vw,58px);font-weight:800;color:var(--blue);margin:18px 0 16px}
+.hero p{font-size:18px;color:var(--ink-2);max-width:560px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.hero figure{position:relative}
+.hero figure img{border-radius:24px;box-shadow:0 20px 50px rgba(0,87,165,.18);aspect-ratio:712/808;object-fit:cover;width:100%;height:auto}
+.hero figcaption{font-size:12px;color:var(--muted);margin-top:8px}
+.badge-year{position:absolute;left:-18px;bottom:32px;background:#fff;border-radius:14px;box-shadow:var(--shadow);padding:12px 16px;font-size:13px;color:var(--ink-2)}
+.badge-year b{display:block;font-size:20px;color:var(--ink)}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr;gap:32px}.hero figure{max-width:520px}.hero figure img{aspect-ratio:4/3;object-position:center 40%}.badge-year{left:12px;bottom:36px}}
+
+/* kpi */
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.kpi{border-radius:var(--r);padding:22px;border:1px solid var(--line);background:#fff}
+.kpi small{font-size:13px;font-weight:600;color:var(--blue)}
+.kpi .v{font-size:clamp(28px,3.6vw,38px);font-weight:800;color:var(--blue);margin:6px 0 4px;line-height:1.15}
+.kpi p{font-size:14px;color:var(--ink-2)}
+.kpi.solid{background:var(--blue);border-color:var(--blue)}
+.kpi.solid small,.kpi.solid .v,.kpi.solid p{color:#fff}
+.kpi.solid p{opacity:.85}
+.kpi.green{background:var(--green-50);border-color:#d5e6c4}
+.kpi.green small,.kpi.green .v{color:var(--green)}
+@media (max-width:760px){.kpis{grid-template-columns:1fr}}
+
+/* cards */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media (max-width:900px){.grid-3,.grid-4{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--shadow)}
+.card h3{color:var(--blue);margin-bottom:6px}
+.card p{color:var(--ink-2);font-size:15px}
+.card.bar{position:relative;padding-top:30px}
+.card.bar::before{content:"";position:absolute;top:0;left:24px;width:40px;height:4px;border-radius:0 0 4px 4px;background:var(--blue)}
+.card.bar.g::before{background:var(--green)}
+.item+.item{margin-top:18px}
+.item h4{font-size:16px;font-weight:700;color:var(--ink)}
+.item p{font-size:15px;color:var(--ink-2)}
+.refs{margin-top:20px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-size:14px;color:var(--muted)}
+.refs a{font-weight:600;background:#fff;border:1px solid var(--blue-100);padding:6px 12px;border-radius:999px;text-decoration:none}
+.refs a:hover{background:var(--blue-50)}
+
+/* split responsibilities */
+.split{display:grid;grid-template-columns:1fr 1fr;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
+.split>div{padding:28px}
+.split .ge{background:var(--blue);color:#fff}
+.split .ge h3{color:#fff}
+.split .sch{background:#fff}
+.split ul{list-style:none;margin-top:14px}
+.split li{position:relative;padding-left:30px;margin-top:10px;font-size:15px}
+.split li::before{content:"";position:absolute;left:0;top:3px;width:18px;height:18px;border-radius:50%;background:rgba(255,255,255,.2) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/12px no-repeat}
+.split .sch li{color:var(--ink-2)}
+.split .sch li::before{background:var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/12px no-repeat}
+@media (max-width:700px){.split{grid-template-columns:1fr}}
+
+/* stats */
+.stat{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.stat .v{font-size:26px;font-weight:800;color:var(--blue);line-height:1.2}
+.stat p{font-size:14px;color:var(--ink-2);margin-top:6px}
+
+/* levels */
+.level{border-radius:var(--r);padding:24px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow)}
+.level .tag{display:inline-block;font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;margin-bottom:10px}
+.level:nth-child(1) .tag{background:#fff2e2;color:#b45f00}
+.level:nth-child(2) .tag{background:var(--blue-50);color:var(--blue)}
+.level:nth-child(3) .tag{background:var(--green-50);color:var(--green)}
+.level p{color:var(--ink-2);font-size:15px}
+.sub-h{margin:40px 0 16px;font-size:20px;font-weight:700;color:var(--ink)}
+
+/* timeline */
+.steps3{display:grid;grid-template-columns:repeat(3,1fr);gap:0;position:relative;margin-top:8px}
+.steps3>div{padding:22px 22px 22px 0;position:relative}
+.steps3 .dot{width:14px;height:14px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 5px var(--blue-100);margin-bottom:16px}
+.steps3::before{content:"";position:absolute;top:29px;left:7px;right:0;height:2px;background:var(--blue-100)}
+.steps3 h4{font-size:16px;color:var(--ink)}
+.steps3 p{font-size:15px;color:var(--ink-2)}
+@media (max-width:700px){.steps3{grid-template-columns:1fr}.steps3::before{display:none}}
+
+/* support table + calc */
+.support{display:grid;grid-template-columns:1.25fr .75fr;gap:20px;align-items:start}
+@media (max-width:860px){.support{grid-template-columns:1fr}}
+table.tiers{width:100%;border-collapse:collapse;font-size:15px}
+table.tiers th{text-align:left;font-size:13px;font-weight:600;color:var(--muted);padding:10px 12px;border-bottom:1px solid var(--line)}
+table.tiers td{padding:14px 12px;border-bottom:1px solid var(--line)}
+table.tiers td:last-child,table.tiers th:last-child{text-align:right}
+table.tiers td:last-child{font-weight:700;color:var(--blue)}
+table.tiers tr.hit td{background:var(--blue-50)}
+table.tiers tr:last-child td{border-bottom:0}
+.lvl{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:8px;background:var(--blue-50);color:var(--blue);font-weight:700;font-size:13px}
+.travel{background:var(--blue);color:#fff;border-radius:var(--r);padding:24px}
+.travel small{font-size:13px;opacity:.85}
+.travel .v{font-size:32px;font-weight:800;margin:4px 0}
+.calc{background:var(--green-50);border:1px solid #d5e6c4;border-radius:var(--r);padding:24px;margin-top:20px}
+.calc h3{color:var(--green);font-size:16px}
+.calc label{display:block;font-size:14px;color:var(--ink-2);margin:12px 0 6px}
+.calc .row{display:flex;gap:10px;align-items:center}
+.calc input[type=number]{width:100%;font:inherit;font-size:18px;font-weight:700;color:var(--ink);padding:10px 14px;border:1.5px solid #c6dcb0;border-radius:12px;background:#fff;outline:none}
+.calc input[type=number]:focus{border-color:var(--green)}
+.calc input[type=range]{width:100%;margin-top:12px;accent-color:var(--green)}
+.calc .out{margin-top:16px;border-top:1px dashed #c6dcb0;padding-top:14px;font-size:14px;color:var(--ink-2)}
+.calc .out div{display:flex;justify-content:space-between;margin-top:4px}
+.calc .total{font-size:30px;font-weight:800;color:var(--green);margin-top:8px;line-height:1.2}
+.calc .note{font-size:12px;color:var(--muted);margin-top:8px}
+
+/* 4 steps */
+.steps4{counter-reset:s}
+.steps4 .card{position:relative}
+.steps4 .n{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--blue);color:#fff;font-weight:700;margin-bottom:12px}
+.steps4 h3{color:var(--ink)}
+
+/* cta */
+.cta{background:linear-gradient(135deg,var(--blue) 0%,#0a3f78 100%);color:#fff;border-radius:24px;padding:40px;display:flex;gap:28px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.cta h2{color:#fff}
+.cta p{opacity:.9;margin-top:8px;max-width:560px}
+.cta .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.disclaimer{font-size:13px;color:var(--muted);margin-top:20px;text-align:center}
+footer{border-top:1px solid var(--line);padding:24px 0;font-size:13px;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
+footer img{height:30px;width:auto}
+
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="ICANCONNECT"><img src="assets/logo.png" alt="ICAN – A brand of Galaxy Education" width="92" height="40"></a>
+    <nav aria-label="Mục lục">
+      <a href="#boi-canh">Bối cảnh</a>
+      <a href="#goi-dong-hanh">Gói đồng hành</a>
+      <a href="#bai-danh-gia">Bài đánh giá</a>
+      <a href="#ho-tro">Hỗ trợ đối tác</a>
+      <a href="#tham-gia">Cách tham gia</a>
+    </nav>
+    <a class="btn btn-primary" href="https://icanpath-clone.vercel.app/option-2/#/" target="_blank" rel="noopener">Xem demo</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="pill">Thư mời hợp tác · Năm học 2026-2027</span>
+        <h1>Hợp tác triển khai ICANPath tại trường</h1>
+        <p>Galaxy Education mời anh/chị — đối tác và đại sứ giáo dục — kết nối nhà trường với ICANPath, chương trình đánh giá tiếng Anh 4 kỹ năng và các hoạt động đồng hành <b>miễn phí</b> cho nhà trường, giáo viên, học sinh và phụ huynh.</p>
+        <div class="ctas">
+          <a class="btn btn-primary" href="#ho-tro">Xem mức hỗ trợ đối tác →</a>
+          <a class="btn btn-ghost" href="https://icanpath-clone.vercel.app/option-2/#/" target="_blank" rel="noopener">Trải nghiệm demo ICANPath</a>
+        </div>
+      </div>
+      <figure>
+        <img src="assets/hero.jpg" alt="Minh họa linh vật ICANPath trên con đường học tập" width="712" height="808">
+        <div class="badge-year">Đăng ký đợt đầu<b>11/2026 – 02/2027</b></div>
+        <figcaption>Minh họa từ demo ICANPath</figcaption>
+      </figure>
+    </div>
+
+    <div class="kpis">
+      <div class="kpi"><small>Chi phí cho nhà trường</small><div class="v">0 đồng</div><p>Galaxy Education tài trợ toàn bộ.</p></div>
+      <div class="kpi solid"><small>Hỗ trợ đối tác tối đa</small><div class="v">10 triệu đồng</div><p>Tính theo từng trường, chi trả bằng tiền mặt.</p></div>
+      <div class="kpi green"><small>Đối soát</small><div class="v">Theo mã trường</div><p>Hệ thống ghi nhận số học sinh làm bài.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- BỐI CẢNH -->
+<section id="boi-canh" class="alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Vì sao lúc này</div>
+      <h2>Bối cảnh triển khai tại trường</h2>
+    </div>
+    <div class="grid-2">
+      <div class="card bar reveal">
+        <h3>Chính sách và lộ trình</h3>
+        <div class="item" style="margin-top:14px"><h4>Quyết định 2371/QĐ-TTg</h4><p>Ngày 27/10/2025, Thủ tướng phê duyệt Đề án đưa tiếng Anh thành ngôn ngữ thứ hai trong trường học giai đoạn 2025-2035, tầm nhìn đến năm 2045.</p></div>
+        <div class="item"><h4>Giai đoạn 2025-2030</h4><p>Nhà trường cần nắm năng lực học sinh để lập kế hoạch và theo dõi tiến độ.</p></div>
+        <div class="item"><h4>Thông tư 94/2026/TT-BGDĐT</h4><p>Quy định tiêu chuẩn, tiêu chí và cách đánh giá mức độ triển khai Đề án. Ban hành ngày 03/11/2026, hiệu lực từ 19/12/2026.</p></div>
+      </div>
+      <div class="card bar g reveal">
+        <h3 style="color:var(--green)">Nhu cầu của nhà trường</h3>
+        <div class="item" style="margin-top:14px"><h4>Đánh giá kỹ năng nghe và nói</h4><p>Bài kiểm tra trên lớp chủ yếu đánh giá từ vựng, ngữ pháp và đọc hiểu. Giáo viên cần thêm dữ liệu về nghe và nói.</p></div>
+        <div class="item"><h4>Dạy học theo trình độ</h4><p>Trong cùng một lớp, giáo viên cần căn cứ để chia nhóm, phụ đạo và bồi dưỡng phù hợp với từng em.</p></div>
+        <div class="item"><h4>Giúp phụ huynh hiểu kết quả</h4><p>Phụ huynh cần biết điểm mạnh, kỹ năng con nên luyện thêm và cách đồng hành.</p></div>
+      </div>
+    </div>
+    <div class="refs reveal">Văn bản tham khảo:
+      <a href="https://vanban.chinhphu.vn/?docid=215728&pageid=27160" target="_blank" rel="noopener">Quyết định 2371/QĐ-TTg ↗</a>
+      <a href="https://xaydungchinhsach.chinhphu.vn/tieu-chuan-danh-gia-muc-do-trien-khai-de-an-dua-tieng-anh-thanh-ngon-ngu-thu-hai-trong-truong-hoc-119261110143301771.htm" target="_blank" rel="noopener">Thông tư 94/2026/TT-BGDĐT ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- GÓI ĐỒNG HÀNH -->
+<section id="goi-dong-hanh">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Nhà trường nhận gì</div>
+      <h2>Gói đồng hành cùng nhà trường</h2>
+      <p class="lead">Galaxy Education tài trợ toàn bộ cho nhà trường, giáo viên, học sinh và phụ huynh.</p>
+    </div>
+    <div class="split reveal">
+      <div class="ge">
+        <h3>Galaxy Education đảm nhận</h3>
+        <ul>
+          <li>Cung cấp hệ thống khảo thí, đề, chấm bài và báo cáo.</li>
+          <li>Tổ chức đợt thi và hỗ trợ kỹ thuật.</li>
+          <li>Tập huấn giáo viên, tổ chức hội thảo và cung cấp ấn phẩm.</li>
+        </ul>
+      </div>
+      <div class="sch">
+        <h3 style="color:var(--green)">Nhà trường phối hợp</h3>
+        <ul>
+          <li>Cử một đầu mối phụ trách.</li>
+          <li>Bố trí thời gian, phòng học hoặc thiết bị.</li>
+          <li>Thông tin tới phụ huynh và học sinh.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BÀI ĐÁNH GIÁ -->
+<section id="bai-danh-gia" class="alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Sản phẩm</div>
+      <h2>Bài đánh giá ICANPath</h2>
+    </div>
+    <div class="grid-4">
+      <div class="stat reveal"><div class="v">~30 phút</div><p>Làm trên máy tính, máy tính bảng hoặc điện thoại.</p></div>
+      <div class="stat reveal"><div class="v">4 kỹ năng</div><p>Nghe, nói, đọc, viết. Độ khó thay đổi theo câu trả lời.</p></div>
+      <div class="stat reveal"><div class="v">Lớp 3-11</div><p>Nội dung theo lứa tuổi, từ tiểu học đến THPT.</p></div>
+      <div class="stat reveal"><div class="v">CEFR</div><p>Pre-A1 đến C1. Báo cáo cho học sinh, phụ huynh và trường.</p></div>
+    </div>
+
+    <h3 class="sub-h reveal">Gói theo cấp học</h3>
+    <div class="grid-3">
+      <div class="level reveal"><span class="tag">Tiểu học</span><p>Bài đánh giá thích ứng, học liệu luyện nghe và nói bám sát sách giáo khoa (ICANKid), kèm câu lạc bộ tiếng Anh.</p></div>
+      <div class="level reveal"><span class="tag">THCS</span><p>Bài đánh giá thích ứng và trắc nghiệm sở thích nghề nghiệp Holland để chuẩn bị cho lựa chọn sau lớp 9.</p></div>
+      <div class="level reveal"><span class="tag">THPT</span><p>Bài đánh giá thích ứng, thi thử đánh giá năng lực theo đợt và trắc nghiệm hướng nghiệp Holland.</p></div>
+    </div>
+
+    <h3 class="sub-h reveal">Hoạt động bổ trợ cho mọi cấp học</h3>
+    <div class="grid-3">
+      <div class="card reveal"><h3>Tập huấn giáo viên</h3><p>Tổ chức khảo thí, đọc báo cáo và dùng kết quả để chia nhóm, điều chỉnh cách dạy.</p></div>
+      <div class="card reveal"><h3>Góc song ngữ và CLB</h3><p>Cung cấp nội dung cho bảng tin, câu lạc bộ và góc tiếng Anh của trường.</p></div>
+      <div class="card reveal"><h3>Hội thảo cho gia đình</h3><p>Tiếng Anh, hướng nghiệp, tâm lý tuổi teen và đồng hành cùng con trong mùa thi.</p></div>
+    </div>
+
+    <h3 class="sub-h reveal">Cơ hội hợp tác với nhà trường</h3>
+    <div class="steps3 reveal">
+      <div><div class="dot"></div><h4>Bắt đầu với gói miễn phí</h4><p>Trao đổi với Ban giám hiệu về gói hỗ trợ phù hợp nhu cầu của trường.</p></div>
+      <div><div class="dot"></div><h4>Phối hợp cả năm học</h4><p>Khảo thí đầu năm, giữa năm và cuối năm, cùng lịch hội thảo.</p></div>
+      <div><div class="dot"></div><h4>Mở rộng từ năm 2027</h4><p>Đề theo chương trình, ôn luyện theo nhu cầu và hướng nghiệp cho lớp 9, lớp 10.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- HỖ TRỢ -->
+<section id="ho-tro">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Dành cho đối tác</div>
+      <h2>Hỗ trợ và cách tham gia</h2>
+      <p class="lead">Galaxy Education chi hỗ trợ bằng tiền mặt cho đối tác theo số học sinh làm bài tại từng trường, cộng chi phí đi lại và làm việc.</p>
+    </div>
+
+    <div class="support">
+      <div class="card reveal" style="padding:8px 12px">
+        <h3 style="padding:16px 12px 4px">Hỗ trợ theo số học sinh làm bài</h3>
+        <table class="tiers" id="tiers">
+          <thead><tr><th>Mức</th><th>Số học sinh làm bài</th><th>Hỗ trợ/trường</th></tr></thead>
+          <tbody>
+            <tr data-min="1000"><td><span class="lvl">1</span></td><td>Từ 1.000 học sinh</td><td>7.000.000 đồng</td></tr>
+            <tr data-min="500"><td><span class="lvl">2</span></td><td>Từ 500 học sinh</td><td>5.000.000 đồng</td></tr>
+            <tr data-min="300"><td><span class="lvl">3</span></td><td>Từ 300 học sinh</td><td>3.000.000 đồng</td></tr>
+            <tr data-min="200"><td><span class="lvl">4</span></td><td>Từ 200 học sinh</td><td>2.000.000 đồng</td></tr>
+            <tr data-min="100"><td><span class="lvl">5</span></td><td>Từ 100 học sinh</td><td>1.000.000 đồng</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <div class="travel reveal">
+          <small>Hỗ trợ đi lại và làm việc</small>
+          <div class="v">+3.000.000 đồng</div>
+          <small>Cho mỗi trường</small>
+        </div>
+        <div class="calc reveal">
+          <h3>Tính nhanh mức hỗ trợ của anh/chị</h3>
+          <label for="n">Số học sinh làm bài tại một trường</label>
+          <input type="number" id="n" min="0" max="5000" step="10" value="500" inputmode="numeric">
+          <input type="range" id="r" min="0" max="1500" step="10" value="500" aria-label="Kéo để chọn số học sinh">
+          <div class="out">
+            <div><span>Theo số học sinh</span><b id="o1">5.000.000 đ</b></div>
+            <div><span>Đi lại và làm việc</span><b id="o2">3.000.000 đ</b></div>
+            <div class="total" id="ot">8.000.000 đồng</div>
+            <div class="note" id="on">Tổng hỗ trợ bằng tiền mặt cho một trường.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sub-h reveal">Đối soát theo dữ liệu hệ thống</h3>
+    <div class="grid-3">
+      <div class="card bar reveal"><h3>Mã riêng cho mỗi bên</h3><p>Mỗi đợt thi gắn mã trường và mã người phụ trách ngay từ đầu.</p></div>
+      <div class="card bar reveal"><h3>Số liệu ghi nhận tự động</h3><p>Hệ thống ghi nhận số học sinh làm bài để đối soát.</p></div>
+      <div class="card bar reveal"><h3>Một trường, một đầu mối</h3><p>Trường được ghi nhận cho đối tác đã kết nối để tránh trùng lặp.</p></div>
+    </div>
+
+    <h3 class="sub-h reveal">Tài liệu và hỗ trợ cho đối tác</h3>
+    <div class="grid-3">
+      <div class="card reveal"><h3>Bộ tài liệu triển khai</h3><p>Slide giới thiệu, brochure cho trường, thư mời, báo cáo mẫu và đường dẫn demo.</p></div>
+      <div class="card reveal"><h3>Lịch hội thảo</h3><p>Tập huấn giáo viên, hội thảo cho phụ huynh và học sinh theo lịch năm học.</p></div>
+      <div class="card reveal"><h3>Hỗ trợ theo nhu cầu</h3><p>Galaxy Education hỗ trợ dịch vụ, hội thảo và nội dung theo đề xuất của đối tác.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 BƯỚC -->
+<section id="tham-gia" class="alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Bắt đầu</div>
+      <h2>4 bước tham gia</h2>
+    </div>
+    <div class="grid-4 steps4">
+      <div class="card reveal"><div class="n">1</div><h3>Đăng ký</h3><p>Nhận mã người phụ trách.</p></div>
+      <div class="card reveal"><div class="n">2</div><h3>Nhận tài liệu</h3><p>Nhận bộ tài liệu và tham gia buổi hướng dẫn ngắn.</p></div>
+      <div class="card reveal"><div class="n">3</div><h3>Kết nối trường</h3><p>Hẹn gặp Ban giám hiệu cùng Galaxy Education.</p></div>
+      <div class="card reveal"><div class="n">4</div><h3>Thi và đối soát</h3><p>Trường tổ chức thi. Đối tác đối soát và nhận hỗ trợ.</p></div>
+    </div>
+
+    <div class="cta reveal" style="margin-top:48px">
+      <div>
+        <h2>Đăng ký đợt đầu (11/2026 – 02/2027)</h2>
+        <p>Anh/chị vui lòng phản hồi đầu mối đã gửi thư để đăng ký và nhận hướng dẫn.</p>
+      </div>
+      <div class="ctas">
+        <a class="btn btn-white" href="https://icanpath-clone.vercel.app/option-2/#/" target="_blank" rel="noopener">Xem demo ICANPath ↗</a>
+      </div>
+    </div>
+    <p class="disclaimer">Không thu danh sách học sinh, không bán khóa học tại trường. Kết quả ICANPath là mức tham chiếu CEFR để hỗ trợ dạy và học, không thay thế chứng chỉ.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="assets/logo.png" alt="ICAN" width="69" height="30">
+    <span>ICANPath | Thư mời hợp tác · Năm học 2026-2027 · Galaxy Education</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var tiers=[[1000,7e6],[500,5e6],[300,3e6],[200,2e6],[100,1e6]];
+  var TRAVEL=3e6;
+  var n=document.getElementById('n'), r=document.getElementById('r');
+  var rows=[].slice.call(document.querySelectorAll('#tiers tbody tr'));
+  function fmt(v){return v.toLocaleString('vi-VN').replace(/,/g,'.')}
+  function calc(src){
+    var v=Math.max(0,parseInt(src.value,10)||0);
+    if(src===n){r.value=Math.min(v,1500)}else{n.value=v}
+    var base=0,hit=null;
+    for(var i=0;i<tiers.length;i++){if(v>=tiers[i][0]){base=tiers[i][1];hit=tiers[i][0];break}}
+    var travel=base>0?TRAVEL:0;
+    document.getElementById('o1').textContent=fmt(base)+' đ';
+    document.getElementById('o2').textContent=fmt(travel)+' đ';
+    document.getElementById('ot').textContent=fmt(base+travel)+' đồng';
+    var note=document.getElementById('on');
+    if(!hit){note.textContent='Cần tối thiểu 100 học sinh làm bài để đạt mức 5.'}
+    else{
+      var next=null;for(var j=tiers.length-1;j>=0;j--){if(tiers[j][0]>v){next=tiers[j];break}}
+      note.textContent=next?('Thêm '+fmt(next[0]-v)+' học sinh để lên mức '+fmt(next[1])+' đ.'):'Đã đạt mức hỗ trợ cao nhất.';
+    }
+    rows.forEach(function(tr){tr.classList.toggle('hit',+tr.dataset.min===hit)});
+  }
+  n.addEventListener('input',function(){calc(n)});
+  r.addEventListener('input',function(){calc(r)});
+  calc(n);
+
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(e){io.observe(e)});
+  } else els.forEach(function(e){e.classList.add('in')});
+
+  var links=[].slice.call(document.querySelectorAll('.nav nav a'));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+  function onScroll(){
+    var y=window.scrollY+120,cur=null;
+    secs.forEach(function(s,i){if(s&&s.offsetTop<=y)cur=i});
+    links.forEach(function(a,i){a.classList.toggle('on',i===cur)});
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+})();
+</script>
+</body>
+</html>
